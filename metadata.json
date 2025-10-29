@@ -1,0 +1,5 @@
+{
+  "name": "SmartExam AI",
+  "description": "A professional exam paper generator that creates clean, printable HTML exam papers based on uploaded textbook images and custom settings.",
+  "requestFramePermissions": []
+}

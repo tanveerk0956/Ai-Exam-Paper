@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartExam AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Print-specific styles for A4 layout */
+      @media print {
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        .exam-paper-container {
+          width: 210mm; /* A4 width */
+          min-height: 297mm; /* A4 height */
+          margin: 0 auto;
+          padding: 20mm; /* Standard A4 margins */
+          box-sizing: border-box;
+          page-break-after: always; /* Ensure each exam paper starts on a new page if multiple are generated (though we only generate one here) */
+        }
+        /* Hide non-print elements */
+        .no-print {
+          display: none !important;
+        }
+        /* Ensure text is black and background is white */
+        * {
+          color: #000 !important;
+          background-color: #fff !important;
+          box-shadow: none !important;
+          text-shadow: none !important;
+        }
+        /* Keep links readable but without color */
+        a {
+          text-decoration: underline !important;
+        }
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
+    
